@@ -77,8 +77,8 @@ if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) &
     $mail->SMTPAuth = true;
     $mail->Username = "supasin.s1t@gmail.com"; // enter your email address
     $mail->Password = "fofyf17041998boybandfedfe"; // enter your password
-    $mail->Port = 465;
-    $mail->SMTPSecure = "ssl";
+    $mail->Port = 21;
+    $mail->SMTPSecure = "ftp";
 
     //Email Settings
     $mail->isHTML(true);
