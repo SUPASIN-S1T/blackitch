@@ -1,6 +1,8 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
     $fname = $_POST['fname'];
@@ -64,9 +66,9 @@ if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) &
         </table>
     </body>";
 
-    require_once "PHPMailer/PHPMailer.php";
-    require_once "PHPMailer/SMTP.php";
-    require_once "PHPMailer/Exception.php";
+    // require_once "PHPMailer/PHPMailer.php";
+    // require_once "PHPMailer/SMTP.php";
+    // require_once "PHPMailer/Exception.php";
 
     $mail = new PHPMailer();
 
