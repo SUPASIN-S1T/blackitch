@@ -76,7 +76,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         $mail->SMTPAuth = true;
         $mail->Username = "supasin@in2it.co.th"; // enter your email address
         $mail->Password = "SUPASIN17041998boybandfedfe"; // enter your password
-        $mail->Port = 25;
+        $mail->Port = 1025;
         $mail->SMTPSecure = "tls";
     
         //Email Settings
