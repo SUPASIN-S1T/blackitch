@@ -1,20 +1,17 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-// use PHPMailer\PHPMailer\SMTP;
-require 'vendor/autoload.php';
-if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
-    $fname = $_POST['fname'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $person = $_POST['person'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-    $allergyF = $_POST['allergyF'];
-    $header = "Table Reserve";
-    $email_host = "supasin.s1t@gmail.com";
-    $email_content = "<body style='margin:0;padding:0;'>
+    if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
+        $fname = $_POST['fname'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $person = $_POST['person'];
+        $date = $_POST['date'];
+        $time = $_POST['time'];
+        $allergyF = $_POST['allergyF'];
+        $header = "Table Reserve - Blackitch Artisan Kitchen";
+        $email_host = "supasin@in2it.co.th";
+        $email_content = "<body style='margin:0;padding:0;'>
         <table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;'>
             <tr>
                 <td align='center' style='padding:0;'>
@@ -65,41 +62,41 @@ if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) &
             </tr>
         </table>
     </body>";
-
-    require_once "PHPMailer/PHPMailer.php";
-    require_once "PHPMailer/SMTP.php";
-    require_once "PHPMailer/Exception.php";
-
-    $mail = new PHPMailer();
-
-    // SMTP Settings
-    $mail->CharSet = 'UTF-8';
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();
-    $mail->Host = "smtp.gmail.com";
-    $mail->SMTPAuth = true;
-    $mail->Username = "supasin.s1t@gmail.com"; // enter your email address
-    $mail->Password = "fofyf17041998boybandfedfe"; // enter your password
-    $mail->Port = 587;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-
-    //Email Settings
-    $mail->isHTML(true);
-    $mail->setFrom($email_host, 'blackitch');
-    $mail->addAddress('supasin.s1t@gmail.com', 'blackitch'); // Send to mail : user
-    $mail->addAddress('supasin@in2it.co.th', 'blackitch'); // Send to mail : admin blackitch
-    $mail->addReplyTo($email, $fname);
-    $mail->Subject = $header;
-    $mail->Body = $email_content;
-    if ($mail->send()) {
-        $status = "success";
-        $response = "Email is sent";
+    
+        require_once "PHPMailer/PHPMailer.php";
+        require_once "PHPMailer/SMTP.php";
+        require_once "PHPMailer/Exception.php"; 
+    
+        $mail = new PHPMailer();
+    
+        // SMTP Settings
+        $mail->CharSet = 'UTF-8';
+        $mail->isSMTP();
+        $mail->Host = "smtp.gmail.com";
+        $mail->SMTPAuth = true;
+        $mail->Username = "supasin@in2it.co.th"; // enter your email address
+        $mail->Password = "SUPASIN17041998boybandfedfe"; // enter your password
+        $mail->Port = 465;
+        $mail->SMTPSecure = "ssl";
+    
+        //Email Settings
+        $mail->isHTML(true);
+        $mail->setFrom($email_host,'blackitch');
+        $mail->addAddress('supasin.s1t@gmail.com','blackitch'); // Send to mail : admin (1)
+        $mail->addAddress('supasin@in2it.co.th','blackitch'); // Send to mail : admin blackitch (2)
+        $mail->addReplyTo($email,$fname);
+        $mail->Subject = $header;
+        $mail->Body = $email_content;
+        if ($mail->send()) {
+            $status = "success";
+            $response = "Email is sent";
+        } else {
+            $status = "failed";
+            $response = "Something is wrong" . $mail->ErrorInfo;
+        }
+    
+        exit(json_encode(array("status" => $status, "response" => $response)));
     } else {
-        $status = "failed";
-        $response = "Something is wrong" . $mail->ErrorInfo;
+        echo "failed !!";
     }
 
-    exit(json_encode(array("status" => $status, "response" => $response)));
-} else {
-    echo "failed !!";
-}
