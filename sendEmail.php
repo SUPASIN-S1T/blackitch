@@ -73,11 +73,11 @@ if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) &
     // SMTP Settings
     $mail->CharSet = 'UTF-8';
     $mail->isSMTP();
-    $mail->Host = "blackitch.com";
+    $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
     $mail->Username = "supasin.s1t@gmail.com"; // enter your email address
     $mail->Password = "fofyf17041998boybandfedfe"; // enter your password
-    $mail->Port = 465;
+    $mail->Port = 587;
     $mail->SMTPSecure = "ssl";
 
     //Email Settings
