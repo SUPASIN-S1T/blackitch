@@ -1,12 +1,11 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+
 require("PHPMailer/PHPMailer.php");
 require("PHPMailer/SMTP.php");
 require("PHPMailer/Exception.php");
-// require('vendor/autoload.php');
+require('vendor/autoload.php');
 if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
     $fname = $_POST['fname'];
     $phone = $_POST['phone'];
@@ -74,7 +73,6 @@ if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) &
 
     // SMTP Settings
     $mail->CharSet = 'UTF-8';
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
