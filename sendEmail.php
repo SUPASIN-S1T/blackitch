@@ -2,10 +2,6 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require("PHPMailer/PHPMailer.php");
-require("PHPMailer/SMTP.php");
-require("PHPMailer/Exception.php");
-require('vendor/autoload.php');
 if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
     $fname = $_POST['fname'];
     $phone = $_POST['phone'];
@@ -68,24 +64,21 @@ if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) &
         </table>
     </body>";
 
+    require_once "PHPMailer/PHPMailer.php";
+    require_once "PHPMailer/SMTP.php";
+    require_once "PHPMailer/Exception.php";
 
     $mail = new PHPMailer();
 
     // SMTP Settings
     $mail->CharSet = 'UTF-8';
     $mail->isSMTP();
-    $mail->Host = "blackitch.com";
+    $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
     $mail->Username = "supasin.s1t@gmail.com"; // enter your email address
     $mail->Password = "fofyf17041998boybandfedfe"; // enter your password
-<<<<<<< HEAD
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
-
-=======
     $mail->Port = 465;
     $mail->SMTPSecure = "ssl";
->>>>>>> parent of 20ebe5e (edit (5) port)
 
     //Email Settings
     $mail->isHTML(true);
