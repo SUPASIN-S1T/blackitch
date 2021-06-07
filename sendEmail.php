@@ -82,7 +82,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         //Email Settings
         $mail->isHTML(true);
         $mail->setFrom($email_host,'blackitch');
-        $mail->addAddress('supasin.s1t@gmail.com','blackitch'); // Send to mail : admin (1)
+        // $mail->addAddress('supasin.s1t@gmail.com','blackitch'); // Send to mail : admin (1)
         $mail->addAddress('supasin@in2it.co.th','blackitch'); // Send to mail : admin blackitch (2)
         $mail->addReplyTo($email,$fname);
         $mail->Subject = $header;
