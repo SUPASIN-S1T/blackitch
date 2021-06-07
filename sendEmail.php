@@ -74,8 +74,8 @@ use PHPMailer\PHPMailer\PHPMailer;
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "supasin.st@hotmail.com"; // enter your email address
-        $mail->Password = "fofyf17boybandfedfe"; // enter your password
+        $mail->Username = "supasin.s1t@gmail.com"; // enter your email address
+        $mail->Password = "fofyf17041998boybandfedfe"; // enter your password
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
     
