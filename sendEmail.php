@@ -1,10 +1,6 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vender/autoload.php';
     if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
         $fname = $_POST['fname'];
         $phone = $_POST['phone'];
@@ -75,14 +71,13 @@ require 'vender/autoload.php';
     
         // SMTP Settings
         $mail->CharSet = 'UTF-8';
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = "supasin.st@hotmail.com"; // enter your email address
         $mail->Password = "fofyf17boybandfedfe"; // enter your password
-        $mail->Port = 587;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 465;
+        $mail->SMTPSecure = "ssl";
     
         //Email Settings
         $mail->isHTML(true);
