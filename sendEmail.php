@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         $time = $_POST['time'];
         $allergyF = $_POST['allergyF'];
         $header = "Table Reserve - Blackitch Artisan Kitchen";
-        $email_host = "supasin@in2it.co.th";
+        $email_host = "supasin.st@hotmail.com";
         $email_content = "<body style='margin:0;padding:0;'>
         <table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;'>
             <tr>
@@ -74,8 +74,8 @@ use PHPMailer\PHPMailer\PHPMailer;
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "supasin@in2it.co.th"; // enter your email address
-        $mail->Password = "SUPASIN17041998boybandfedfe"; // enter your password
+        $mail->Username = "supasin.st@hotmail.com"; // enter your email address
+        $mail->Password = "fofyf17boybandfedfe"; // enter your password
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
     
