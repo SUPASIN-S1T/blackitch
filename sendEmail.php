@@ -1,9 +1,6 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
     if (isset($_POST['fname']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['person']) && isset($_POST['date']) && isset($_POST['time']) && isset($_POST['allergyF'])) {
         $fname = $_POST['fname'];
         $phone = $_POST['phone'];
@@ -74,14 +71,12 @@ use PHPMailer\PHPMailer\Exception;
     
         // SMTP Settings
         $mail->CharSet = 'UTF-8';
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-        $mail->SMTPDebug = 2;
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = "supasin.st@hotmail.com"; // enter your email address
         $mail->Password = "fofyf17boybandfedfe"; // enter your password
-        $mail->Port = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
     
         //Email Settings
