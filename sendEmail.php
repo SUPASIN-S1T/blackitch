@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         $time = $_POST['time'];
         $allergyF = $_POST['allergyF'];
         $header = "Table Reserve - Blackitch Artisan Kitchen";
-        $email_host = "supasin.s1t@gmail.com";
+        $email_host = "no.reply.blackitch@gmail.com";
         $email_content = "<body style='margin:0;padding:0;'>
         <table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;'>
             <tr>
@@ -74,8 +74,8 @@ use PHPMailer\PHPMailer\PHPMailer;
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "supasin.s1t@gmail.com"; // enter your email address
-        $mail->Password = "fofyf17041998boybandfedfe"; // enter your password
+        $mail->Username = "no.reply.blackitch@gmail.com"; // enter your email address
+        $mail->Password = "AdminBlackitch!2021!"; // enter your password
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
     
@@ -83,7 +83,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         $mail->isHTML(true);
         $mail->setFrom($email_host,'blackitch');
         // $mail->addAddress('supasin.s1t@gmail.com','blackitch'); // Send to mail : admin (1)
-        $mail->addAddress('supasin@in2it.co.th','blackitch'); // Send to mail : admin blackitch (2)
+        $mail->addAddress('blackitch2014@gmail.com','blackitch'); // Send to mail : admin blackitch (2)
         $mail->addReplyTo($email,$fname);
         $mail->Subject = $header;
         $mail->Body = $email_content;
