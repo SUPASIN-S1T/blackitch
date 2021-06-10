@@ -409,6 +409,11 @@ input[type="email"]::placeholder {
     color: #C19977;
 }
 
+#section-style-footer #card-working-time p {
+    font-size: 1.3rem;
+    color: #C19977;
+}
+
 
 /* footer copyright */
 
@@ -641,7 +646,7 @@ font-family: FontAwesome; */
     }
     /* section : recommend*/
     .row {
-        margin: 50px 0;
+        margin: 10px 0;
     }
     .img-rounded {
         width: 200px;
@@ -698,8 +703,13 @@ font-family: FontAwesome; */
     }
     #section-style-footer #card-contact h5.card-text,
     #section-style-footer #card-social p,
-    #section-style-footer #card-working-time h5.card-text {
+    #section-style-footer #card-working-time h5.card-text,
+    #section-style-footer #card-working-time p {
         font-size: 1rem;
+    }
+    #section-style-footer #card-working-time p {
+        text-align: center;
+        color: #C19977;
     }
     /* footer : copyright */
     #footer-style-copyright p {
