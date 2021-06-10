@@ -132,7 +132,7 @@ body {
 
 #section-style-recommend h5 {
     color: #C19977;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .card {
@@ -181,18 +181,6 @@ body {
 .img-animated {
     max-width: 100%;
     box-shadow: 10px 9px 12px rgba(0, 0, 0, 0.8);
-}
-
-@media (min-width: 1030px) and (max-width: 1366px) {
-    #section-style-information #card-info {
-        margin: 10px;
-    }
-    #section-style-information p.card-text {
-        font-size: 20px;
-    }
-    .hr-style {
-        width: 63%;
-    }
 }
 
 
@@ -562,6 +550,9 @@ font-family: FontAwesome; */
     #section-style-recommend {
         padding: 25px;
     }
+    #section-style-recommend h5 {
+        font-size: 1.3rem;
+    }
     /* section : gallery */
     #section-style-gallery {
         padding: 25px 0;
@@ -647,6 +638,9 @@ font-family: FontAwesome; */
     /* section : recommend*/
     .row {
         margin: 10px 0;
+    }
+    #section-style-recommend h5 {
+        font-size: 1.2rem;
     }
     .img-rounded {
         width: 200px;
@@ -891,5 +885,23 @@ font-family: FontAwesome; */
     .client-every-day p,
     .great-moments p {
         font-size: 20px;
+    }
+}
+
+
+/* laptop ~ */
+
+@media (min-width: 1030px) and (max-width: 1366px) {
+    #section-style-information #card-info {
+        margin: 10px;
+    }
+    #section-style-information p.card-text {
+        font-size: 20px;
+    }
+    .hr-style {
+        width: 63%;
+    }
+    #section-style-recommend h5 {
+        font-size: 1.35rem;
     }
 }
