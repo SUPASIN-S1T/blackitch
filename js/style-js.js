@@ -158,7 +158,7 @@ $(document).ready(function() {
             success: function(response) {
                 swal({
                     title: "successfully !",
-                    text: "Thanks for table reserve,Please wait for a response from the staff.",
+                    text: "Thank you for your reservation. We will revert back to you a confirmation email within a day.",
                     icon: "success",
                     timer: 3000
                 });
