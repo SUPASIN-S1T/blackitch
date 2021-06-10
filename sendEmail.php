@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         $time = $_POST['time'];
         $allergyF = $_POST['allergyF'];
         $header = "Table Reserve - Blackitch Artisan Kitchen";
-        $email_host = "supasin.st@hotmail.com";
+        $email_host = "supasin.s1t@gmail.com";
         $email_content = "<body style='margin:0;padding:0;'>
         <table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;'>
             <tr>
