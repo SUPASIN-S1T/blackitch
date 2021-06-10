@@ -35,7 +35,7 @@ use PHPMailer\PHPMailer\PHPMailer;
                                                 <h3>person : $person</h3>
                                                 <h3>food allergy : $allergyF</h3>
                                             </p>
-                                            <h4 style='color: green; font-size: 16px;text-align: center;'>Thanks for table reserve, Please wait for a response from the staff.</h4>
+                                            <h4 style='color: green; font-size: 16px;text-align: center;'>Thank you for your reservation. We will revert back to you a confirmation email within a day.</h4>
                                         </td>
                                     </tr>
                                     <tr>
