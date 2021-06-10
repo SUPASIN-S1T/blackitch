@@ -82,8 +82,8 @@ use PHPMailer\PHPMailer\PHPMailer;
         //Email Settings
         $mail->isHTML(true);
         $mail->setFrom($email_host,'blackitch');
-        // $mail->addAddress('supasin.s1t@gmail.com','blackitch'); // Send to mail : admin (1)
-        $mail->addAddress('blackitch2014@gmail.com','blackitch'); // Send to mail : admin blackitch (2)
+        $mail->addAddress($email); // Send to mail : customer or user
+        $mail->addAddress('blackitch2014@gmail.com','blackitch'); // Send to mail : admin blackitch
         $mail->addReplyTo($email,$fname);
         $mail->Subject = $header;
         $mail->Body = $email_content;
