@@ -820,7 +820,7 @@ font-family: FontAwesome; */
     }
     /* section : form */
     #section-style-form {
-        min-height: 60vh;
+        min-height: 100vh;
     }
     #card-form {
         padding: 5px;
