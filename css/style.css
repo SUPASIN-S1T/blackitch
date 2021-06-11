@@ -639,6 +639,10 @@ font-family: FontAwesome; */
     .row {
         margin: 10px 0;
     }
+    #section-style-recommend {
+        min-height: 100vh;
+        padding: 80px 0;
+    }
     #section-style-recommend h5 {
         font-size: 1.2rem;
     }
@@ -646,14 +650,22 @@ font-family: FontAwesome; */
         width: 200px;
     }
     /* section : information */
+    #section-style-information {
+        padding: 80px 0;
+    }
     #section-style-information p.card-text {
         font-size: 16px;
     }
     /* section : menu-list */
     #section-style-menu-list h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     /* section : gallery */
+    
+    #section-style-gallery {
+        padding: 50px 0;
+    }
+
     #section-style-gallery h4 {
         font-size: 17px;
     }
@@ -662,6 +674,9 @@ font-family: FontAwesome; */
         min-height: 50vh;
     }
     /* section : form */
+    #section-style-form {
+        padding: 80px 0;
+    }
     #card-form {
         padding: 10px;
     }
