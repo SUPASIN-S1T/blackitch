@@ -930,6 +930,9 @@ font-family: FontAwesome; */
         font-size: 1.35rem;
     }
     /* form */
+    #section-style-form {
+        padding: 80px 0;
+    }
     /* #card-form .card-title {
         margin-bottom: -1.5rem;
     }
