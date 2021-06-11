@@ -131,7 +131,7 @@ $(window).scroll(function() {
 
 
 
-
+// ajax sending email
 $(document).ready(function() {
     $('#formReserve').submit(function(e) {
         e.preventDefault();
@@ -176,11 +176,9 @@ $(document).ready(function() {
     })
 });
 
+$("#navbarToggle").on('show.bs.collapse', function() {
+    $('a.nav-link').click(function() {
+        $("#navbarToggle").collapse('hide');
+    });
+});
 
-
-// const navLinks = document.querySelectorAll('.nav-item')
-// const menuToggle = document.getElementById('navbarToggle')
-// const bsCollapse = new bootstrap.Collapse(menuToggle)
-// navLinks.forEach((l) => {
-//     l.addEventListener('click', () => { bsCollapse.toggle() })
-// })

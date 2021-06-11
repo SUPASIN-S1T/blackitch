@@ -238,7 +238,7 @@ video {
 
 #section-style-form {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh; 
     color: #ffff;
 }
 
@@ -741,9 +741,9 @@ font-family: FontAwesome; */
 
 @media (min-width:576.98px) and (max-width:767.98px) and (orientation: landscape) {
     /* section : welcome */
-    #section-style-main {
+    /* #section-style-main {
         margin-top: 50px;
-    }
+    } */
     #h5-zoomIn-style {
         font-size: 1.5rem;
     }
